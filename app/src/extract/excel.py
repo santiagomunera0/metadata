@@ -1,5 +1,6 @@
 from openpyxl import load_workbook
 import os
+from datetime import datetime
 
 from src.common.common_tools import parameters
 
@@ -11,7 +12,9 @@ def get_propierties(excel, file):
             "Autor": excel.properties.creator,
             "Asunto": excel.properties.subject,
             "Palabras Clave": excel.properties.keywords,
-            "File Size (MB)": round(file_size_mb, 2)
+            "File Size (MB)": round(file_size_mb, 2),
+            "Fecha de Creación": datetime.fromtimestamp(os.path.getctime(file)).strftime('%Y-%m-%d %H:%M:%S'),
+            "Fecha de Modificación": datetime.fromtimestamp(os.path.getmtime(file)).strftime('%Y-%m-%d %H:%M:%S')
         }
 
         return metadata
