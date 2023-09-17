@@ -13,8 +13,8 @@ def get_propierties(document, file):
             "Asunto": document.core_properties.subject,
             "Palabras Clave": document.core_properties.keywords,
             "File Size (MB)": round(file_size_mb, 2),
-            "Fecha de Creación": datetime.fromtimestamp(os.path.getctime(archivo_path)).strftime('%Y-%m-%d %H:%M:%S'),
-            "Fecha de Modificación": datetime.fromtimestamp(os.path.getmtime(archivo_path)).strftime('%Y-%m-%d %H:%M:%S')
+            "Fecha de Creación": datetime.fromtimestamp(os.path.getctime(file)).strftime('%Y-%m-%d %H:%M:%S'),
+            "Fecha de Modificación": datetime.fromtimestamp(os.path.getmtime(file)).strftime('%Y-%m-%d %H:%M:%S')
         }
 
         return metadata
