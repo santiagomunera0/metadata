@@ -1,4 +1,5 @@
 import os, sys
+from src.extract.extract_metadata import extract_metadata
 
 parameters = {
     'path': os.path.dirname(sys.path[0]),
@@ -27,3 +28,13 @@ def check_directories(dict_):
     for path in dict_.values():
         if not os.path.exists(path):
             os.mkdir(path)
+
+
+
+""" def multiple_files(files):
+    all_metadata = []  # Lista para almacenar metadatos de todos los archivos
+    for file in files:
+        metadata = extract_metadata(file)
+        if metadata:
+            all_metadata.append(metadata)  # Agrega los metadatos a la lista
+    return all_metadata """
