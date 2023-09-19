@@ -11,6 +11,7 @@ def list_metadata_to_dataframe(list, format):
   return df
 
 def read_files(path):
+  list_data_unified = []
   files, list_xls, list_doc, list_ppt, list_pdf = [], [], [], [], []
 
   for file in os.listdir(path):
@@ -20,13 +21,21 @@ def read_files(path):
       extension = pathlib.Path(file_path)
       match extension.suffix:
         case ".xlsx":
-          list_xls.append(extract_xls(file_path))
+          dict_xls = extract_xls(file_path)
+          list_data_unified.append(list(dict_xls.values()))
+          list_xls.append(dict_xls)
         case ".docx":
-          list_doc.append(extract_doc(file_path))
+          dict_doc = extract_doc(file_path)
+          list_data_unified.append(list(dict_doc.values()))
+          list_doc.append(dict_doc)
         case ".pptx":
-          list_ppt.append(extract_ppt(file_path))
+          dict_ppt = extract_ppt(file_path)
+          list_data_unified.append(list(dict_ppt.values()))
+          list_ppt.append(dict_ppt)
         case ".pdf":
-          list_pdf.append(extract_pdf(file_path))  
+          dict_pdf = extract_pdf(file_path)
+          list_data_unified.append(list(dict_pdf.values()))
+          list_pdf.append(dict_pdf)
 
   print("***************")
   print("   exporting xls metadata...")
@@ -45,6 +54,10 @@ def read_files(path):
   list_metadata_to_dataframe(list_pdf, 'pdf')
   print("   pdf metadata exported...")
   print("***************")
+
+  df_data_unified = pd.DataFrame(data=list_data_unified, columns=['Titulo', 'Autor', 'Asunto', 'Palabras_Clave', 'File_Size', 'Fecha_Creacion', 'Fecha_Modificacion', 'Categoria', 'Comentarios', 'Numero_Paginas'])
+  export_path_file = os.path.join(parameters['raw'], f'data_unified_metadata.csv')
+  df_data_unified.to_csv(export_path_file, index=False)
 
 if __name__=="__main__":
   check_directories(parameters)
