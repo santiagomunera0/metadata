@@ -1,7 +1,7 @@
 import os
 import pathlib
 import pandas as pd
-from src.common.common_tools import parameters
+from src.common.common_tools import parameters, check_directories
 from src.extract.extract_metadata import extract_xls, extract_doc, extract_pdf, extract_ppt
 
 def list_metadata_to_dataframe(list, format):
@@ -47,4 +47,5 @@ def read_files(path):
   print("***************")
 
 if __name__=="__main__":
+  check_directories(parameters)
   read_files(parameters['docs'])
