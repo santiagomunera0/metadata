@@ -1,5 +1,6 @@
 from docx import Document
 import os
+import pandas as pd
 from datetime import datetime
 
 from src.common.common_tools import parameters
@@ -27,6 +28,5 @@ def get_propierties(document, file):
     
 def extract_metadata(file): 
     document = Document(file)
-    metadata = get_propierties(document, file)    
-
-    print(metadata)
+    metadata = get_propierties(document, file)
+    return metadata

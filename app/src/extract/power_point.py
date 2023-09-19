@@ -27,6 +27,5 @@ def get_propierties(presentation, file):
     
 def extract_metadata(file):
     presentation = Presentation(file)
-    metadata = get_propierties(presentation, file)    
-
-    print(metadata)    
+    metadata = get_propierties(presentation, file)
+    return metadata    

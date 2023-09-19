@@ -24,6 +24,5 @@ def get_propierties(pdf, file):
     
 def extract_metadata(file):
     pdf_document = fitz.open(file)
-    metadata = get_propierties(pdf_document, file)    
-
-    print(metadata)     
+    metadata = get_propierties(pdf_document, file)
+    return metadata    

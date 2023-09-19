@@ -5,8 +5,8 @@ parameters = {
     'path_in': os.path.join(os.path.dirname(sys.path[0]), '01_data'),
     'path_out': os.path.join(os.path.dirname(sys.path[0]), '02_output'),
     'docs': os.path.join(os.path.dirname(sys.path[0]), '01_data', 'docs'),
-    'raw': os.path.join(os.path.dirname(sys.path[0]), '01_data', 'raw'),
-    'curated': os.path.join(os.path.dirname(sys.path[0]), '01_data', 'curated')
+    'raw': os.path.join(os.path.dirname(sys.path[0]), '02_output', 'raw'),
+    'curated': os.path.join(os.path.dirname(sys.path[0]), '02_output', 'curated')
 }
 
 def check_directories(dict_):

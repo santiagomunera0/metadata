@@ -29,9 +29,6 @@ def get_propierties(excel, file):
     
 def extract_metadata(file):
     excel = load_workbook(file, read_only=True)
-    metadata = get_propierties(excel, file)    
-
-    print(metadata)  
-    result = pd.DataFrame([metadata])
-    return result
+    metadata = get_propierties(excel, file)
+    return metadata
   
