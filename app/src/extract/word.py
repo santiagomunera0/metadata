@@ -15,7 +15,8 @@ def get_propierties(document, file):
             "File_Size": round(file_size_mb, 2),
             "Fecha_Creacion": document.core_properties.created,
             "Fecha_Modificación": document.core_properties.modified,
-            "Categoria" : document.core_properties.category
+            "Categoria": document.core_properties.category,
+            "Comentarios": document.core_properties.comments
         }
 
         return metadata

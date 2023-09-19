@@ -32,5 +32,6 @@ def extract_metadata(file):
     metadata = get_propierties(excel, file)    
 
     print(metadata)  
-    return pd.DataFrame.from_dict(metadata)
+    result = pd.DataFrame([metadata])
+    return result
   
