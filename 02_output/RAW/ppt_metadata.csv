@@ -1,2 +1,7 @@
-Titulo,Autor,Asunto,Palabras_Clave,Fecha_Creacion,Fecha_Modificacion,File_Size,Numero_Paginas,Categorias,Comentarios
-Presentación de PowerPoint,USUARIO,,,2020-02-03 21:07:58,2022-10-03 15:09:03,0.65,22,,
+Titulo,Autor,Asunto,Palabras_Clave,File_Size,Fecha_Creacion,Fecha_Modificacion,Categorias,Comentarios,Numero_Paginas
+Presentación de PowerPoint,Tatiana Salazar Bedoya,,,1.04,2021-05-09 22:17:54,2021-05-09 23:29:25,,,6
+MODELAMIENTO Y ARQUITECTURA DE DATOS,jc gm,,,0.09,2020-03-24 02:18:35,2020-03-26 11:19:06,,,17
+MODELAMIENTO Y ARQUITECTURA DE DATOS,jc gm,,,0.42,2020-03-24 02:18:35,2020-05-13 13:49:01,,,57
+Modelo Entidad Relación,jc gm,,,0.04,2020-03-19 01:20:16,2020-03-19 02:48:06,,,3
+Presentación de PowerPoint,USUARIO,,,0.65,2020-02-03 21:07:58,2022-10-03 15:09:03,,,22
+Escritura de artículos científicos,Claudia Elena Durango Vanegas,,,1.84,2022-03-09 16:11:17,2022-03-09 23:56:30,,,24
