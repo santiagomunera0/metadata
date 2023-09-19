@@ -18,8 +18,6 @@ def get_propierties(excel, file):
             "Fecha_Modificacion": excel.properties.modified,
             "Categoria": excel.properties.category
         }
-        
-
 
         return metadata
 

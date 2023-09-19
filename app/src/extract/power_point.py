@@ -11,12 +11,12 @@ def get_propierties(presentation, file):
             "Autor": presentation.core_properties.author,
             "Asunto": presentation.core_properties.subject,
             "Palabras_Clave": presentation.core_properties.keywords,
+            "File_Size": round(file_size_mb, 2),
             "Fecha_Creacion": presentation.core_properties.created,
             "Fecha_Modificacion": presentation.core_properties.modified,
-            "File_Size": round(file_size_mb, 2),
-            "Numero_Paginas": len(presentation.slides),
             "Categorias": presentation.core_properties.category,
             "Comentarios": presentation.core_properties.comments,
+            "Numero_Paginas": len(presentation.slides),
         }
 
         return metadata
