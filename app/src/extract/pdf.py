@@ -7,15 +7,13 @@ def get_propierties(pdf, file):
     file_size_mb = os.path.getsize(file) / (1024 * 1024)
     try:
         metadata = {
-            'Título': pdf.metadata.get('title', ''),
+            'Titulo': pdf.metadata.get('title', ''),
             'Autor': pdf.metadata.get('author', ''),
             'Asunto': pdf.metadata.get('subject', ''),
-            'Palabras clave': pdf.metadata.get('keywords', ''),
-            'Creador': pdf.metadata.get('creator', ''),
-            "File Size (MB)": round(file_size_mb, 2),
-            'Productor': pdf.metadata.get('producer', ''),
-            'Fecha de creación': pdf.metadata.get('creationDate', ''),
-            'Fecha de modificación': pdf.metadata.get('modDate', '')
+            'Palabras_Clave': pdf.metadata.get('keywords', ''),
+            "File_Size": round(file_size_mb, 2),
+            'Fecha_Creacion': pdf.metadata.get('creationDate', ''),
+            'Fecha_Modificacion': pdf.metadata.get('modDate', '')
         }
 
         return metadata

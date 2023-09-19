@@ -7,16 +7,16 @@ def get_propierties(presentation, file):
     file_size_mb = os.path.getsize(file) / (1024 * 1024)
     try:
         metadata = {
-            "Title": presentation.core_properties.title,
-            "Author": presentation.core_properties.author,
-            "Subject": presentation.core_properties.subject,
-            "Keywords": presentation.core_properties.keywords,
-            "Created": presentation.core_properties.created,
-            "Modified": presentation.core_properties.modified,
-            "File Size (MB)": round(file_size_mb, 2),
-            "Number of Slides": len(presentation.slides),
-            "Categories": presentation.core_properties.category,
-            "Comments": presentation.core_properties.comments,
+            "Titulo": presentation.core_properties.title,
+            "Autor": presentation.core_properties.author,
+            "Asunto": presentation.core_properties.subject,
+            "Palabras_Clave": presentation.core_properties.keywords,
+            "Fecha_Creacion": presentation.core_properties.created,
+            "Fecha_Modificacion": presentation.core_properties.modified,
+            "File_Size": round(file_size_mb, 2),
+            "Numero_Paginas": len(presentation.slides),
+            "Categorias": presentation.core_properties.category,
+            "Comentarios": presentation.core_properties.comments,
         }
 
         return metadata

@@ -8,13 +8,14 @@ def get_propierties(document, file):
     file_size_mb = os.path.getsize(file) / (1024 * 1024)
     try:
         metadata = { 
-            "Título": document.core_properties.title,
+            "Titulo": document.core_properties.title,
             "Autor": document.core_properties.author,
             "Asunto": document.core_properties.subject,
-            "Palabras Clave": document.core_properties.keywords,
-            "File Size (MB)": round(file_size_mb, 2),
-            "Fecha de Creación": datetime.fromtimestamp(os.path.getctime(file)).strftime('%Y-%m-%d %H:%M:%S'),
-            "Fecha de Modificación": datetime.fromtimestamp(os.path.getmtime(file)).strftime('%Y-%m-%d %H:%M:%S')
+            "Palabras_Clave": document.core_properties.keywords,
+            "File_Size": round(file_size_mb, 2),
+            "Fecha_Creacion": document.core_properties.created,
+            "Fecha_Modificación": document.core_properties.modified,
+            "Categoria" : document.core_properties.category
         }
 
         return metadata
